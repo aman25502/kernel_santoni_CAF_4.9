@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 export KERNELDIR="$PWD" 
-export USE_CCACHE=1
-export CCACHE_DIR="$HOME/.ccache"
 git config --global user.email "soniataran79@gmail.com"
 git config --global user.name "aman25502"
  

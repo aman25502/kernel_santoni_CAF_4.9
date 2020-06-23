@@ -8,7 +8,7 @@ export TZ="Asia/Kolkata";
 # Kernel compiling script
 mkdir -p $HOME/TC
 git clone https://github.com/aman25502/AnyKernel3 -b santoni 
-git clone https://github.com/kdrag0n/proton-clang.git prebuilts/proton-clang --depth=1 
+git clone https://github.com/crdroidandroid/android_prebuilts_clang_host_linux-x86_clang-6443078 -b 10.0 prebuilts/clang-6443078 --depth=1 
  
 # Upload log to del.dog
 function sendlog {
@@ -54,10 +54,10 @@ export ANYKERNEL="${KERNELDIR}/AnyKernel3";
 export AROMA="${KERNELDIR}/aroma/";
 export ARCH="arm64";
 export SUBARCH="arm64";
-export KBUILD_COMPILER_STRING="$($KERNELDIR/prebuilts/proton-clang/bin/clang --version | head -n 1 | perl -pe 's/\(http.*?\)//gs' | sed -e 's/  */ /g' -e 's/[[:space:]]*$//')"
+export KBUILD_COMPILER_STRING="$($KERNELDIR/prebuilts/clang-6443078/bin/clang --version | head -n 1 | perl -pe 's/\(http.*?\)//gs' | sed -e 's/  */ /g' -e 's/[[:space:]]*$//')"
 export KBUILD_BUILD_USER="aman25502"
 export KBUILD_BUILD_HOST="ahoy"
-export PATH="$KERNELDIR/prebuilts/proton-clang/bin:${PATH}"
+export PATH="$KERNELDIR/prebuilts/clang-6443078 /bin:${PATH}"
 export DEFCONFIG="santoni_defconfig";
 export ZIP_DIR="${KERNELDIR}/files";
 export IMAGE="${OUTDIR}/arch/${ARCH}/boot/Image.gz-dtb";
